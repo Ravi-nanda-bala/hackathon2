@@ -22,8 +22,3 @@ export async function addUser(name, avatar, hashedPassword) {
     const result = await client.db("flipkart").collection("users").
         insertOne({ name: name, avatar: avatar, password: hashedPassword, createdAt: new Date().toISOString() });
 }
-
-
-
-// export {getUsers,getUserById,getBrands};
-// We can export mutiple files like in 21 line
